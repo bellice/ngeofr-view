@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau interactif avec Tabulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+    <!-- Script livereload (à retirer en production) -->
+    <script src="http://localhost:35729/livereload.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Données ngeo</h1>
+        <p>Filtrez et explorez les données ci-dessous.</p>
+    </header>
+
+    <main>
+        <div class="filter-container">
+            <label for="global-filter" class="sr-only">Filtrer toutes les colonnes</label>
+            <input type="text" id="global-filter" placeholder="Filtrer toutes les colonnes..." aria-label="Filtrer toutes les colonnes">
+        </div>
+
+        <div id="table" role="region" aria-label="Tableau de données"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ngeofr. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Chargement différé des scripts -->
+    <script src="https://unpkg.com/tabulator-tables@6.3/dist/js/tabulator.min.js" defer></script>
+    <script src="app.js" defer></script>
+</body>
+</html>
