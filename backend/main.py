@@ -96,6 +96,7 @@ def get_data(
 
 
 # Démarrer le serveur avec : uvicorn backend.main:app --reload
+# Démarer le front avec : python livereload_server.py
 
 # Si données lourdes
 # 1/ Pagination côté serveur
